@@ -15,12 +15,14 @@ class Repository:
         self.persona_id_auto_increment+=1
         p.persona_id=self.persona_id_auto_increment
         self.personas.append(p)
-       
+        return p
+        
     def add_mail (self,m):
         #lo mismo que lo anterior pero para mails
         self.mail_id_auto_increment+=1
         m._Mail__mail_id=self.mail_id_auto_increment 
-        self.mails.append(m) 
+        self.mails.append(m)
+        return m
     
     def to_string(self,persona_id=None,mail_id=None):
         output=""
